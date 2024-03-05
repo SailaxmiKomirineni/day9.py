@@ -1,0 +1,51 @@
+Difference between time and space complexcity?
+    => The time taken by algorithm to execute is time complexcity. How much memory used by algorithm in computer is space complexcity.
+
+=> By using space and time complexcity solve?
+   Find duplicate element? which is best method?
+   => list or== O(n)
+   => set    == O(1) => by hashing 
+
+=> List method
+   num = [1,2,3,4,1,5]
+   empty = []
+   for i in num:      // n times search from num
+      if i not in empty:  // n times searching in empty
+         empty.append(i)
+      else:
+         print(i)
+  Time complexcity == O(n**2)
+  Space complexcity == O(n)
+
+=> Set method
+   num = [1,2,3,4,1,5]
+   empty = set()
+   for i in num:      // n times search from num
+      if i not in empty:  //  no searching in empty  == constant
+         empty.append(i)
+      else:
+         print(i)
+  # hash set (hashing)
+  ex:- [1,2,1]
+  
+  **space = "prime(might be larger)" * Ascii/binary // stored in set like this
+  
+  => step1: space = 11*01 == 11//binary value of 1 is 01 // stored in memory   => O(1)
+  key: 11  // 11 CONSIDERED AS VARIAABLE time taken to store 1 in 11 is 1sec
+  value:1
+  
+  => step2: space = 11*10 == 110 //binary value of 2 is 10
+  key: 110  // 110 CONSIDERED AS VARIAABLE time taken to store 2 in 110 is 1sec
+  value:2
+
+  => step3: space = 11*01 == 11 //binary value of 2 is 10
+  key: 11  // Memory block already occupied
+  return false
+  
+  Time complexcity == O(n)
+  Space complexcity == O(n)
+
+  
+         
+
+   
