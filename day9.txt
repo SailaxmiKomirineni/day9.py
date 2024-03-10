@@ -22,7 +22,7 @@ Difference between time and space complexcity?
    empty = set()
    for i in num:      // n times search from num
       if i not in empty:  //  no searching in empty  == constant
-         empty.append(i)
+         empty.add(i)
       else:
          print(i)
   # hash set (hashing)
